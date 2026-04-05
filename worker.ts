@@ -18,16 +18,6 @@ export default {
       return response;
     }
 
-    // For /owner SPA routes (excluding actual static assets),
-    // serve the owner/index.html so client-side routing works.
-    if (
-      url.pathname.startsWith("/owner") &&
-      !url.pathname.startsWith("/owner/assets/")
-    ) {
-                      const ownerIndexUrl = new URL("/owner/index.html", url.origin);
-      return env.ASSETS.fetch(new Request(ownerIndexUrl, request));
-    }
-
     // Fall through to static assets
     return env.ASSETS.fetch(request);
   },
