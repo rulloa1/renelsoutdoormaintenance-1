@@ -4,3 +4,7 @@
 !.dev.vars.example
 .env*
 !.env.example
+
+# generated build output
+node_modules/
+public/owner/

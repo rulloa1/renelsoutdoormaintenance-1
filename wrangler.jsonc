@@ -3,6 +3,9 @@
   "name": "renelsoutdoormaintenance-1",
   "compatibility_date": "2026-04-03",
   "main": "./worker.ts",
+  "build": {
+    "command": "npm ci && npx vite build"
+  },
   "observability": {
     "enabled": true
   },
