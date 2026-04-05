@@ -9,7 +9,7 @@
  * - Matches site-wide: #0D0D0D base, #B5E61D lime accent, Barlow Condensed headings
  */
 import { useLocation } from "wouter";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import {
   LogOut,
   Phone,
@@ -75,7 +75,7 @@ const SERVICE_LABELS: Record<string, string> = {
   powerwash: "Power Wash",
 };
 
-const SERVICE_ICONS: Record<string, React.ReactNode> = {
+const SERVICE_ICONS: Record<string, ReactNode> = {
   maintenance: <Scissors size={13} />,
   cleanup: <Leaf size={13} />,
   mulch: <Flower2 size={13} />,
