@@ -24,7 +24,7 @@ export default {
       url.pathname.startsWith("/owner") &&
       !url.pathname.startsWith("/owner/assets/")
     ) {
-              const ownerIndexUrl = new URL("/owner.html", url.origin);
+                      const ownerIndexUrl = new URL("/owner/index.html", url.origin);
       return env.ASSETS.fetch(new Request(ownerIndexUrl, request));
     }
 
